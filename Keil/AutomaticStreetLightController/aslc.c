@@ -12,6 +12,10 @@ void main(){
 	sensor1 = sensor2 = sensor3 = 0;
 	
 	while(1){
+		
+		if(sensor1 == 0 && sensor2 == 0 && sensor3 == 0){
+			load1 = load2 = load3 = 0;
+		}
 		if(sensor1 == 1){
 			load1 = 1;
 			load2 = 0;
