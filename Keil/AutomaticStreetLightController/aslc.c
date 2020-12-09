@@ -18,20 +18,25 @@ void main(){
 		}
 		if(sensor1 == 1){
 			load1 = 1;
-			load2 = 0;
-			load3 = 0;
 		}
 		
 		if(sensor2 == 1){
-			load1 = 0;
 			load2 = 1;
-			load3 = 0;
 		}
 		
 		if(sensor3 == 1){
-			load1 = 0;
-			load2 = 0;
 			load3 = 1;
+		}
+		if(sensor1 == 0){
+			load1 = 0;
+		}
+		
+		if(sensor2 == 0){
+			load2 = 0;
+		}
+		
+		if(sensor3 == 0){
+			load3 = 0;
 		}
 	}
 	

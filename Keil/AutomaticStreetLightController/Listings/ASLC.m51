@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/09/2020  09:24:54  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/09/2020  09:33:34  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -27,8 +27,8 @@ LINK MAP OF MODULE:  .\Objects\ASLC (ASLC)
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
-            CODE    0800H     0038H     UNIT         ?PR?MAIN?ASLC
-            CODE    0838H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0800H     003BH     UNIT         ?PR?MAIN?ASLC
+            CODE    083BH     000CH     UNIT         ?C_C51STARTUP
 
 
 
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\ASLC (ASLC)
   B:00A0H.0       PUBLIC        load1
   B:00A0H.1       PUBLIC        load2
   B:00A0H.2       PUBLIC        load3
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/09/2020  09:24:54  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/09/2020  09:33:34  PAGE 2
 
 
   -------         PROC          MAIN
@@ -73,25 +73,28 @@ SYMBOL TABLE OF MODULE:  .\Objects\ASLC (ASLC)
   C:081BH         LINE#         19
   C:081EH         LINE#         20
   C:0820H         LINE#         21
-  C:0822H         LINE#         22
-  C:0824H         LINE#         23
-  C:0824H         LINE#         25
-  C:0827H         LINE#         26
-  C:0829H         LINE#         27
-  C:082BH         LINE#         28
-  C:082DH         LINE#         29
+  C:0820H         LINE#         23
+  C:0823H         LINE#         24
+  C:0825H         LINE#         25
+  C:0825H         LINE#         27
+  C:0828H         LINE#         28
+  C:082AH         LINE#         29
+  C:082AH         LINE#         30
   C:082DH         LINE#         31
-  C:0830H         LINE#         32
-  C:0832H         LINE#         33
-  C:0834H         LINE#         34
-  C:0836H         LINE#         35
-  C:0836H         LINE#         36
+  C:082FH         LINE#         32
+  C:082FH         LINE#         34
+  C:0832H         LINE#         35
+  C:0834H         LINE#         36
+  C:0834H         LINE#         38
+  C:0837H         LINE#         39
+  C:0839H         LINE#         40
+  C:0839H         LINE#         41
   -------         ENDPROC       MAIN
   -------         ENDMOD        ASLC
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0038H BYTE ( 2%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003BH BYTE ( 2%) *
 ******************************************************************************
 
-Program Size: data=9.0 xdata=0 code=71
+Program Size: data=9.0 xdata=0 code=74
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
