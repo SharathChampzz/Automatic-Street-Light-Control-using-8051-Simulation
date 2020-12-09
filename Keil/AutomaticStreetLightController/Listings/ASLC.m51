@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/09/2020  09:33:34  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/09/2020  13:53:15  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -27,8 +27,8 @@ LINK MAP OF MODULE:  .\Objects\ASLC (ASLC)
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
-            CODE    0800H     003BH     UNIT         ?PR?MAIN?ASLC
-            CODE    083BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0800H     004EH     UNIT         ?PR?MAIN?ASLC
+            CODE    084EH     000CH     UNIT         ?C_C51STARTUP
 
 
 
@@ -52,49 +52,59 @@ SYMBOL TABLE OF MODULE:  .\Objects\ASLC (ASLC)
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
+  B:00A0H.3       PUBLIC        ldrout
   C:0800H         PUBLIC        main
+  B:0090H.7       PUBLIC        ldr
   B:0090H.0       PUBLIC        sensor1
   B:0090H.1       PUBLIC        sensor2
   B:0090H.2       PUBLIC        sensor3
   B:00A0H.0       PUBLIC        load1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/09/2020  13:53:15  PAGE 2
+
+
   B:00A0H.1       PUBLIC        load2
   B:00A0H.2       PUBLIC        load3
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/09/2020  09:33:34  PAGE 2
-
-
   -------         PROC          MAIN
-  C:0800H         LINE#         10
-  C:0800H         LINE#         11
-  C:0806H         LINE#         12
-  C:080CH         LINE#         14
+  C:0800H         LINE#         13
+  C:0800H         LINE#         14
+  C:0806H         LINE#         15
   C:080CH         LINE#         16
-  C:0815H         LINE#         17
-  C:081BH         LINE#         18
-  C:081BH         LINE#         19
-  C:081EH         LINE#         20
-  C:0820H         LINE#         21
-  C:0820H         LINE#         23
-  C:0823H         LINE#         24
-  C:0825H         LINE#         25
-  C:0825H         LINE#         27
-  C:0828H         LINE#         28
-  C:082AH         LINE#         29
-  C:082AH         LINE#         30
-  C:082DH         LINE#         31
-  C:082FH         LINE#         32
-  C:082FH         LINE#         34
-  C:0832H         LINE#         35
-  C:0834H         LINE#         36
-  C:0834H         LINE#         38
-  C:0837H         LINE#         39
-  C:0839H         LINE#         40
-  C:0839H         LINE#         41
+  C:0810H         LINE#         17
+  C:0810H         LINE#         19
+  C:0813H         LINE#         20
+  C:0815H         LINE#         22
+  C:081EH         LINE#         23
+  C:0824H         LINE#         24
+  C:0824H         LINE#         25
+  C:0827H         LINE#         26
+  C:0829H         LINE#         27
+  C:0829H         LINE#         29
+  C:082CH         LINE#         30
+  C:082EH         LINE#         31
+  C:082EH         LINE#         33
+  C:0831H         LINE#         34
+  C:0833H         LINE#         35
+  C:0833H         LINE#         36
+  C:0836H         LINE#         37
+  C:0838H         LINE#         38
+  C:0838H         LINE#         40
+  C:083BH         LINE#         41
+  C:083DH         LINE#         42
+  C:083DH         LINE#         44
+  C:0840H         LINE#         45
+  C:0842H         LINE#         46
+  C:0842H         LINE#         47
+  C:0844H         LINE#         48
+  C:0844H         LINE#         49
+  C:0846H         LINE#         50
+  C:084CH         LINE#         51
+  C:084CH         LINE#         53
   -------         ENDPROC       MAIN
   -------         ENDMOD        ASLC
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003BH BYTE ( 2%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 004EH BYTE ( 3%) *
 ******************************************************************************
 
-Program Size: data=9.0 xdata=0 code=74
+Program Size: data=9.0 xdata=0 code=93
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

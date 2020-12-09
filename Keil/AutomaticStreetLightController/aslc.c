@@ -7,13 +7,19 @@ sbit load1 = P2^0;
 sbit load2 = P2^1;
 sbit load3 = P2^2;
 
+sbit ldr = P1^7;
+sbit ldrout = P2^3;
+
 void main(){
 	load1 = load2 = load3 = 0;
 	sensor1 = sensor2 = sensor3 = 0;
-	
+	ldr = ldrout = 0;
 	while(1){
 		
-		if(sensor1 == 0 && sensor2 == 0 && sensor3 == 0){
+		if(ldr == 0){ // No Light means Night time
+			ldrout = 1; // during night time green led turns on just for indication
+			
+			if(sensor1 == 0 && sensor2 == 0 && sensor3 == 0){
 			load1 = load2 = load3 = 0;
 		}
 		if(sensor1 == 1){
@@ -38,6 +44,11 @@ void main(){
 		if(sensor3 == 0){
 			load3 = 0;
 		}
-	}
-	
+		}
+		else{  // there is a light 
+			ldrout = 0;
+			load1 = load2 = load3 = 0;
+		}
+		
+}
 }
