@@ -1,0 +1,58 @@
+C51 COMPILER V9.60.0.0   ASLC                                                              12/09/2020 08:39:16 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ASLC
+OBJECT MODULE PLACED IN .\Objects\aslc.obj
+COMPILER INVOKED BY: S:\Keil\Installation\C51\BIN\C51.EXE aslc.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\aslc.lst) TABS(2) OBJECT(.\Objects\aslc.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit sensor1 = P1^0;
+   3          sbit sensor2 = P1^1;
+   4          sbit sensor3 = P1^2;
+   5          
+   6          sbit load1 = P2^0;
+   7          sbit load2 = P2^1;
+   8          sbit load3 = P2^2;
+   9          
+  10          void main(){
+  11   1        load1 = load2 = load3 = 0;
+  12   1        sensor1 = sensor2 = sensor3 = 0;
+  13   1        
+  14   1        while(1){
+  15   2          if(sensor1 == 1){
+  16   3            load1 = 1;
+  17   3            load2 = 0;
+  18   3            load3 = 0;
+  19   3          }
+  20   2          
+  21   2          if(sensor2 == 1){
+  22   3            load1 = 0;
+  23   3            load2 = 1;
+  24   3            load3 = 0;
+  25   3          }
+  26   2          
+  27   2          if(sensor3 == 1){
+  28   3            load1 = 0;
+  29   3            load2 = 0;
+  30   3            load3 = 1;
+  31   3          }
+  32   2        }
+  33   1        
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     41    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
