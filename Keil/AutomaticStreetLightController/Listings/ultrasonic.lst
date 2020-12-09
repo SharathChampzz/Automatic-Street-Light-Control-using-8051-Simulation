@@ -1,0 +1,96 @@
+C51 COMPILER V9.60.0.0   ULTRASONIC                                                        12/09/2020 17:49:04 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ULTRASONIC
+OBJECT MODULE PLACED IN .\Objects\ultrasonic.obj
+COMPILER INVOKED BY: S:\Keil\Installation\C51\BIN\C51.EXE ultrasonic.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT
+                    -(.\Listings\ultrasonic.lst) TABS(2) OBJECT(.\Objects\ultrasonic.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit trigpin = P2^6;
+   3          sbit echopin = P2^7;
+   4          sbit led1 = P1^5;
+   5          sbit led2 = P1^7;
+   6          
+   7          void delay(unsigned int z);
+   8          unsigned int distance,i;
+   9          void main(){
+  10   1            echopin=1;
+  11   1            led1=0;
+  12   1            led2=0;
+  13   1            trigpin=0;
+  14   1            echopin=1;
+  15   1      
+  16   1            for(i=0;i<20000;i++);
+  17   1            TMOD=0x01;
+  18   1            TH0=0x00;
+  19   1            TL0=0x00;
+  20   1      
+  21   1      
+  22   1            while(1)
+  23   1            {
+  24   2                  trigpin=1;
+  25   2                  for(i=0;i<=10;i++);
+  26   2                  trigpin=0;
+  27   2                  while(echopin==0);
+  28   2                  TR0=1;
+  29   2                  while(echopin==1);
+  30   2                  TR0=0;
+  31   2      
+  32   2                  distance=TH0<<B;
+  33   2                  distance=distance+TL0;
+  34   2                  distance=distance/5;
+  35   2                  TH0=0x00;
+  36   2                  TL0=0x00;
+  37   2      
+  38   2      
+  39   2                  for(i=0;i<=20000;i++);
+  40   2      
+  41   2                  if(distance<25)
+  42   2                  {
+  43   3                      led1=1;
+  44   3                  }
+  45   2                  else
+  46   2                  {
+  47   3                      led1=0;
+  48   3                  }
+  49   2      
+  50   2                  if(distance>50)
+  51   2                  {
+  52   3                      led2=1;
+  53   3                  }
+  54   2      
+C51 COMPILER V9.60.0.0   ULTRASONIC                                                        12/09/2020 17:49:04 PAGE 2   
+
+  55   2                  else
+  56   2                  {
+  57   3                      led2=0;
+  58   3                  }
+  59   2            }
+  60   1      }                                                             
+  61          
+  62          
+  63          void delay(unsigned int z)
+  64          {
+  65   1          unsigned int p,q;
+  66   1          for(p=0;p<z;p++)//repeat for 'z' times
+  67   1          {
+  68   2            for(q=0;q<1375;q++); //repeat for 1375 times
+  69   2          }
+  70   1      }                   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    214    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

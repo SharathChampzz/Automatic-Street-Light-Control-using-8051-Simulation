@@ -1,0 +1,3 @@
+".\Objects\aslc.obj" 
+TO ".\Objects\UltraSonic" 
+PRINT(".\Listings\UltraSonic.m51") CODE( 0X0000-0X0FFF )
